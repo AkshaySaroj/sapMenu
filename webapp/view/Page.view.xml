@@ -1,0 +1,9 @@
+<mvc:View controllerName="com.akshay.menu.controller.Page"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+    <VBox id="_IDGenVBox" class="sapUiSmallMargin">
+		<Button id="button" text="Open Menu" press="onPress" ariaHasPopup="Menu"/>
+	</VBox>
+    </Page>
+</mvc:View>

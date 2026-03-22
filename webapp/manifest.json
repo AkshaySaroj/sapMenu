@@ -1,0 +1,98 @@
+{
+  "_version": "1.83.0",
+  "sap.app": {
+    "id": "com.akshay.menu",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.21.0",
+      "toolsId": "8efd4a9a-affe-4bd1-b2db-3818bdad63e6"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.146.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "com.akshay.menu.i18n.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "com.akshay.menu.view",
+        "async": true,
+        "viewPath": "com.akshay.menu.view"
+      },
+      "routes": [
+        {
+          "name": "RoutePage",
+          "pattern": ":?query:",
+          "target": [
+            "TargetPage"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetPage": {
+          "id": "Page",
+          "name": "Page"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "com.akshay.menu.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    }
+  }
+}
