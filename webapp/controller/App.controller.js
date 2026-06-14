@@ -5,6 +5,10 @@ sap.ui.define([
 
   return BaseController.extend("com.akshay.menu.controller.App", {
       onInit() {
+      },
+
+      prinnt(){
+        
       }
   });
 });
